@@ -7,10 +7,20 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str) {
-  return str
-    .split('')
-    .reverse()
-    .join('');
+  let rev = '';
+  for (let char of str) {
+    rev = char + rev;
+  }
+  return rev;
 }
 
+console.log(reverse('hello'));
+
 module.exports = reverse;
+
+//function reverse(str) {
+//  return str
+//    .split('')
+//    .reverse()
+//    .join('');
+//}
