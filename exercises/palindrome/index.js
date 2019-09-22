@@ -7,6 +7,19 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+//--------------------------------------------------------------------
+// Using Array.every() helper function
+function palindrome(str) {
+  return str.split('').every((val, i) => val === str[str.length - i - 1]);
+}
+
+//---------------------------------------------------------------------
+// Using External Things!
+/*
+const reverse = require('../reversestring/index');
+function palindrome(str) {
+    return str === reverse(str);
+}
+*/
 
 module.exports = palindrome;
