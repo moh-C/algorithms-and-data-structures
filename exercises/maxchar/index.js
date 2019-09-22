@@ -7,9 +7,13 @@
 
 function maxChar(str) {
   let chars = {};
+  let max = 0,
+    maxChara = '';
   for (let char of str) chars[char] = chars[char] + 1 || 1;
+  for (let char in chars) {
+    chars[char] > max ? ((max = chars[char]), (maxChara = char)) : null;
+  }
+  return maxChara;
 }
-
-maxChar('hello');
 
 module.exports = maxChar;
