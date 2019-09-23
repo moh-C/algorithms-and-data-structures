@@ -8,7 +8,9 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {
+// ---------------------------------------------
+// First Implementation
+/*function anagrams(stringA, stringB) {
   firstObj = objectifier(stringA);
   secondObj = objectifier(stringB);
   let firstArr = iterator(firstObj);
@@ -31,7 +33,18 @@ function objectifier(str) {
   }
   return charMap;
 }
+*/
 
-console.log(anagrams('hello', 'llohe'));
+function anagrams(A, B) {
+  return cleanString(A) === cleanString(B);
+}
+
+function cleanString(str) {
+  return str
+    .replace(/[^\w]/g, '')
+    .split('')
+    .sort()
+    .join('');
+}
 
 module.exports = anagrams;
