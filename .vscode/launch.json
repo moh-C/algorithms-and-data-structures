@@ -14,7 +14,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}\\exercises\\steps\\index.js"
+      "program": "${workspaceFolder}\\exercises\\pyramid\\index.js"
     }
   ]
 }
