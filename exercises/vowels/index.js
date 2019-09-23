@@ -7,13 +7,24 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
+// -----------------------------------------------------
+// Built in function which is, no wonder, slower!
 function vowels(str) {
-  vowel = ['e', 'a', 'o', 'i', 'u'];
+  let match = str.match(/[aieuo]/gi);
+  return match ? match.length : 0;
+}
+
+// -----------------------------------------------------
+// Solution by Iteration (Faster)
+/*
+function vowels(str) {
+  vowel = 'eaoiu';
   let number = 0;
   for (let i of str.toLowerCase()) {
     if (vowel.includes(i)) number++;
   }
   return number;
 }
+*/
 
 module.exports = vowels;
